@@ -103,33 +103,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const CLINIC_FAQ = {
     diastema: {
       question: "Como funciona o Fechamento de Diastema?",
-      answer: "O fechamento de diastema com resina composta corrige o espaço entre os dentes de forma conservadora, buscando harmonia, naturalidade e preservação da estrutura dental. É um tratamento realizado pela Dra. Erika Machado em São José dos Campos, sem desgastes agressivos da estrutura saudável.",
-      waMessage: "Olá Dra. Erika, gostaria de agendar uma avaliação para Fechamento de Diastema."
+      answer: "O fechamento de diastema é um procedimento delicado e conservador realizado com resina composta nobre. Ele permite aproximar os dentes e harmonizar o sorriso sem desgastar a estrutura saudável. A Dra. Erika Machado avalia a proporção do seu rosto e dentes para um resultado muito natural.",
+      waMessage: "Olá, Dra. Erika! Gostaria de conversar sobre o Fechamento de Diastema."
     },
     clareamento: {
       question: "Como é feito o Clareamento Dental?",
-      answer: "O clareamento é realizado com protocolos seguros que preservam a integridade do esmalte dentário e minimizam a sensibilidade. O resultado é um sorriso mais claro e luminoso, mantendo total naturalidade.",
-      waMessage: "Olá Dra. Erika, tenho interesse em agendar uma consulta para Clareamento Dental."
+      answer: "Utilizamos protocolos modernos e supervisionados que respeitam a integridade do esmalte e previnem a sensibilidade. O objetivo é iluminar o sorriso com suavidade, mantendo a naturalidade e a saúde dos seus dentes.",
+      waMessage: "Olá, Dra. Erika! Gostaria de agendar um Clareamento Dental."
     },
     protese: {
       question: "Quais são as opções de Próteses e Restaurações?",
-      answer: "Trabalhamos com próteses dentárias modernas (fixas e removíveis) para reabilitação oral completa e restaurações estéticas com resinas compostas nobres que mimetizam perfeitamente a translucidez dos seus dentes.",
-      waMessage: "Olá Dra. Erika, gostaria de saber mais sobre Próteses e Restaurações Estéticas."
+      answer: "Cuidamos da sua mastigação e do seu bem-estar com próteses confortáveis e restaurações em resinas estéticas que se integram perfeitamente à cor natural dos dentes, devolvendo a segurança ao sorrir.",
+      waMessage: "Olá, Dra. Erika! Gostaria de saber mais sobre Próteses e Restaurações."
     },
     horarios: {
       question: "Quais são os horários de atendimento?",
-      answer: "Atendemos de Segunda a Sexta das 09:00 às 18:00 e aos Sábados das 09:00 às 13:00 (Domingos fechado). O atendimento é com hora marcada para garantir pontualidade, privacidade e conforto.",
-      waMessage: "Olá, gostaria de verificar os horários disponíveis para consulta no consultório."
+      answer: "Atendemos de Segunda a Sexta das 09:00 às 18:00 e aos Sábados das 09:00 às 13:00 (aos Domingos ficamos fechados). Todas as consultas são com hora marcada, garantindo privacidade e atendimento pontual sem pressa.",
+      waMessage: "Olá! Gostaria de verificar os horários disponíveis para uma consulta com a Dra. Erika."
     },
     local: {
       question: "Onde fica localizado o consultório?",
-      answer: "Estamos no Shopping Centro: Rua Rubião Júnior, 84, Sala 57 (2º andar), Centro, São José dos Campos - SP. O local conta com estacionamento coberto e total acessibilidade.",
-      waMessage: "Olá, gostaria de confirmar o endereço e marcar uma consulta com a Dra. Erika Machado."
+      answer: "Nosso consultório fica no Shopping Centro: Rua Rubião Júnior, 84, Sala 57 (2º andar), no Centro de São José dos Campos. Um espaço acolhedor, de fácil acesso e com estacionamento coberto para sua comodidade.",
+      waMessage: "Olá! Gostaria de confirmar a localização e agendar uma visita ao consultório."
     },
     agendar: {
       question: "Como agendar uma avaliação?",
-      answer: "Para agendar sua consulta de forma rápida, basta clicar no botão abaixo para abrir diretamente nosso canal oficial no WhatsApp. Nossa equipe responderá com atenção e carinho!",
-      waMessage: "Olá Dra. Erika Machado, gostaria de agendar uma avaliação odontológica no consultório."
+      answer: "É muito simples! Basta clicar no botão abaixo para conversar diretamente conosco pelo WhatsApp oficial. Responderemos com toda a atenção para encontrar o melhor dia e horário para você.",
+      waMessage: "Olá, Dra. Erika! Gostaria de agendar uma consulta no consultório."
     }
   };
 

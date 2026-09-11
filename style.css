@@ -1,47 +1,59 @@
 /* ==========================================================================
    DRA. ERIKA MACHADO — ODONTOLOGIA RESTAURADORA & ESTÉTICA
    CROSP 115717 | SÃO JOSÉ DOS CAMPOS - SP
-   Direção de Arte: Clínica Boutique Sóbria & Ritmo Cromático Mineral
+   Identidade Oficial: Paleta Creme, Bege Acolhedor e Dourado Champagne
    Tipografia: Cormorant Garamond (-0.02em) + Manrope
-   Paleta: Cinzas Minerais Nobres (#ECEAE5 / #F6F5F2) alternados com Off-White (#FAF9F6)
-          Acentos em Verde Sálvia (#5C715E), Terracota Suave (#B67A62) e Carvão (#22252A)
+   Vibe: Clínica Boutique, Humana, Confortável e Acolhedora
    ========================================================================== */
 
 :root {
-  /* Ritmo Cromático: Alternância de Cinzas Minerais e Off-Whites ao longo da rolagem */
-  --color-bg-hero: #F6F5F2;       /* Greige claro suave para a Hero */
-  --color-bg-grey: #ECEAE5;       /* Cinza mineral nobre (Casos e Tratamentos) */
-  --color-bg-light: #FAF9F6;      /* Off-White luminoso (Sobre a Doutora) */
-  --color-bg-info: #F5F4F0;       /* Cinza suave para Horários e Mapa */
-  --color-bg-card: #FFFFFF;       /* Branco puro para destacar os cards sobre o cinza */
+  /* Paleta Oficial da Marca: Creme Aconchegante, Bege Linho e Dourado Nobre */
+  --color-bg-hero: #FAF7F2;          /* Creme quente suave e luminoso para a Hero */
+  --color-bg-section: #F3ECE2;       /* Bege linho suave para Casos e Tratamentos */
+  --color-bg-light: #FDFCFA;         /* Off-white creme suave (Sobre a Doutora) */
+  --color-bg-info: #F6F0E7;          /* Creme aveludado acolhedor (Horários/Mapa) */
+  --color-bg-card: #FFFFFF;          /* Branco acolhedor para os cards */
 
-  --color-text-main: #22252A;     /* Grafite / Carvão profundo elegante */
-  --color-text-muted: #5C6068;    /* Ardósia suave equilibrado para textos corridos */
-  --color-text-light: #888E98;    /* Legendas e dados secundários */
+  /* Tipografia Quente e Humanizada (Carvão Café & Moka) */
+  --color-text-main: #2A2420;        /* Café espresso aquecido (elegante e humano) */
+  --color-text-muted: #635850;       /* Moka suave para leitura aveludada */
+  --color-text-light: #8E8278;       /* Bege moka suave para legendas */
 
-  /* Acentos Sóbrios */
-  --color-sage: #5C715E;          /* Verde Sálvia Nobre */
-  --color-sage-hover: #48594A;
-  --color-terracotta: #B67A62;    /* Terracota Suave */
+  /* Dourado Champagne Oficial da Marca */
+  --color-gold: #C59B63;             /* Dourado champagne nobre */
+  --color-gold-hover: #AF854E;       /* Dourado no hover */
+  --color-gold-light: #F2E8DB;       /* Creme dourado sutil para badges e ícones */
+  --color-gold-border: #DFCBB5;      /* Borda fina em dourado champagne */
+  --color-gold-glow: rgba(197, 155, 99, 0.16);
+
+  /* Acentos Terrosos e Botânicos */
+  --color-terracotta: #B87C64;       /* Terracota suave acolhedora */
   --color-terracotta-hover: #9E644D;
-  --color-sand: #D4CFC9;          /* Bege Acinzentado */
+  --color-sage: #526B57;             /* Verde Sálvia Botânico para WhatsApp e tags */
+  --color-sage-hover: #405545;
+  --color-sand: #DDD4C8;             /* Bege areia suave */
 
-  /* Separadores ultra finos */
-  --color-border: #DFDCD7;
-  --color-border-subtle: #E8E6E1;
+  /* Separadores Ultra Finos */
+  --color-border: #E8DFD3;
+  --color-border-subtle: #F0E8DD;
+
+  /* Superfícies Nobres Escuras (Barra Superior e Rodapé) */
+  --color-dark-surface: #241E1A;     /* Café profundo / bronze nobre */
+  --color-dark-subtle: #2E2722;
 
   /* Tipografia */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Formas */
-  --radius-sm: 4px;
-  --radius-card: 6px;
+  /* Formas Acolhedoras */
+  --radius-sm: 6px;
+  --radius-card: 8px;
   --radius-btn: 6px;
   --radius-pill: 9999px;
 
-  /* Sombra sutil e difusa */
-  --shadow-diffuse: 0 10px 40px rgba(0, 0, 0, 0.03);
+  /* Sombra Difusa e Quente */
+  --shadow-diffuse: 0 10px 40px rgba(60, 45, 30, 0.04);
+  --shadow-gold: 0 8px 30px rgba(197, 155, 99, 0.18);
 
   --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -116,14 +128,14 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   1. Barra Superior Institucional (Escura e Discreta)
+   1. Barra Superior Institucional (Bronze / Café com Detalhes em Dourado)
    -------------------------------------------------------------------------- */
 .top-notice {
-  background-color: #1C1F24;
-  color: #D5D9E0;
+  background-color: var(--color-dark-surface);
+  color: #E2DBD2;
   font-size: 0.8rem;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(223, 203, 181, 0.12);
 }
 
 .top-notice .container {
@@ -142,12 +154,12 @@ p {
 }
 
 .top-notice-badge .cro-pill {
-  background-color: var(--color-sage);
+  background-color: var(--color-gold);
   color: #FFFFFF;
   padding: 2px 8px;
   border-radius: var(--radius-sm);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04em;
 }
 
@@ -158,7 +170,7 @@ p {
 }
 
 .top-notice-links a {
-  color: #D5D9E0;
+  color: #D5CCC1;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -166,17 +178,17 @@ p {
 }
 
 .top-notice-links a:hover {
-  color: #FFFFFF;
+  color: var(--color-gold-light);
 }
 
 /* --------------------------------------------------------------------------
-   2. Cabeçalho Principal (Navbar)
+   2. Cabeçalho Principal (Navbar em Creme Quente com Logo Oficial)
    -------------------------------------------------------------------------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(246, 245, 242, 0.96);
+  background-color: rgba(250, 247, 242, 0.97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
 }
@@ -185,31 +197,27 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
-.brand {
-  display: flex;
-  flex-direction: column;
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: var(--transition);
 }
 
-.brand-title {
-  font-family: var(--font-serif);
-  font-size: 1.68rem;
-  font-weight: 600;
-  color: var(--color-text-main);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+.brand-logo-img {
+  height: 50px;
+  width: auto;
+  max-width: 230px;
+  object-fit: contain;
+  display: block;
 }
 
-.brand-subtitle {
-  font-size: 0.72rem;
-  color: var(--color-sage);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-top: 3px;
+.brand-logo-link:hover {
+  opacity: 0.92;
 }
 
 .site-nav {
@@ -226,32 +234,32 @@ p {
 }
 
 .nav-link:hover {
-  color: var(--color-sage);
+  color: var(--color-gold);
 }
 
-/* Botões do Sistema (Verde Sálvia Nobre, Raio 6px) */
+/* Botões do Sistema (Dourado Champagne Nobre) */
 .btn-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: var(--color-sage);
+  background-color: var(--color-gold);
   color: #FFFFFF !important;
-  padding: 11px 22px;
+  padding: 11px 24px;
   border-radius: var(--radius-btn);
   font-size: 0.88rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: var(--transition);
-  border: 1px solid var(--color-sage);
-  box-shadow: none;
+  border: 1px solid var(--color-gold);
+  box-shadow: var(--shadow-gold);
 }
 
 .btn-cta:hover {
-  background-color: var(--color-sage-hover);
-  border-color: var(--color-sage-hover);
+  background-color: var(--color-gold-hover);
+  border-color: var(--color-gold-hover);
   transform: translateY(-1px);
-  opacity: 0.95;
+  box-shadow: 0 10px 30px rgba(197, 155, 99, 0.28);
 }
 
 .btn-outline {
@@ -261,8 +269,8 @@ p {
   gap: 8px;
   background-color: transparent;
   color: var(--color-text-main);
-  border: 1px solid var(--color-border);
-  padding: 11px 22px;
+  border: 1px solid var(--color-gold-border);
+  padding: 11px 24px;
   border-radius: var(--radius-btn);
   font-size: 0.88rem;
   font-weight: 500;
@@ -271,8 +279,8 @@ p {
 }
 
 .btn-outline:hover {
-  border-color: var(--color-sage);
-  color: var(--color-sage);
+  border-color: var(--color-gold);
+  color: var(--color-gold-hover);
   background-color: var(--color-bg-card);
 }
 
@@ -292,7 +300,7 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   3. Hero Section (Fundo Stone Suave #F6F5F2 — Sem Clichê de IA)
+   3. Hero Section (Fundo Creme Aconchegante #FAF7F2 & Dourado Nobre)
    -------------------------------------------------------------------------- */
 .hero-section {
   padding: 80px 0 96px 0;
@@ -312,7 +320,7 @@ p {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-sage);
+  color: var(--color-gold);
   margin-bottom: 20px;
 }
 
@@ -424,17 +432,17 @@ p {
 
 .doctor-portrait-caption p {
   font-size: 0.82rem;
-  color: var(--color-sage);
-  font-weight: 600;
+  color: var(--color-gold);
+  font-weight: 700;
   letter-spacing: 0.04em;
 }
 
 /* --------------------------------------------------------------------------
-   4. Seção Casos Reais (Fundo Cinza Mineral #ECEAE5 para Contraste Real)
+   4. Seção Casos Reais (Fundo Bege Linho Nobre #F3ECE2)
    -------------------------------------------------------------------------- */
 .cases-section {
   padding: 96px 0;
-  background-color: var(--color-bg-grey);
+  background-color: var(--color-bg-section);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
@@ -450,7 +458,7 @@ p {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-terracotta);
+  color: var(--color-gold);
   display: block;
   margin-bottom: 10px;
 }
@@ -467,7 +475,7 @@ p {
   color: var(--color-text-muted);
 }
 
-/* Grid de Casos Clínicos Reais (Cards em Branco Puro Destacando-se sobre o Cinza) */
+/* Grid de Casos Clínicos Reais (Cards em Branco Acolhedor com Borda Dourada Suave) */
 .cases-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -486,8 +494,9 @@ p {
 }
 
 .case-card:hover {
-  border-color: #CAC6BD;
+  border-color: var(--color-gold-border);
   transform: translateY(-2px);
+  box-shadow: 0 12px 34px rgba(60, 45, 30, 0.06);
 }
 
 .case-card-img-wrap {
@@ -495,7 +504,7 @@ p {
   width: 100%;
   aspect-ratio: 4/3;
   overflow: hidden;
-  background-color: #E2DFD9;
+  background-color: #EAE3D9;
 }
 
 .case-card-img-wrap img {
@@ -520,7 +529,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--color-text-main);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-gold-border);
 }
 
 .case-card-body {
@@ -550,19 +559,19 @@ p {
 .case-card-action {
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--color-terracotta);
+  color: var(--color-gold);
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
 .case-card-action:hover {
-  color: var(--color-terracotta-hover);
+  color: var(--color-gold-hover);
   transform: translateX(3px);
 }
 
 /* --------------------------------------------------------------------------
-   5. Seção Sobre a Doutora (Fundo Off-White #FAF9F6 — Alívio Luminoso)
+   5. Seção Sobre a Doutora (Fundo Creme Luminoso #FDFCFA)
    -------------------------------------------------------------------------- */
 .about-section {
   padding: 96px 0;
@@ -589,7 +598,7 @@ p {
   border-radius: var(--radius-sm);
   overflow: hidden;
   aspect-ratio: 1/1;
-  background-color: #EAE8E3;
+  background-color: #EAE4DA;
 }
 
 .about-photo-inner img {
@@ -631,7 +640,7 @@ p {
   font-size: 0.95rem;
   font-weight: 700;
   font-family: var(--font-sans);
-  color: var(--color-sage);
+  color: var(--color-gold);
   margin-bottom: 6px;
   letter-spacing: -0.01em;
 }
@@ -642,11 +651,11 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   6. Seção de Tratamentos (Fundo Cinza Mineral #ECEAE5)
+   6. Seção de Tratamentos (Fundo Bege Linho Nobre #F3ECE2)
    -------------------------------------------------------------------------- */
 .treatments-section {
   padding: 96px 0;
-  background-color: var(--color-bg-grey);
+  background-color: var(--color-bg-section);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
@@ -670,22 +679,23 @@ p {
 
 .treatment-box:hover {
   transform: translateY(-2px);
-  border-color: var(--color-sage);
+  border-color: var(--color-gold);
+  box-shadow: 0 12px 34px rgba(60, 45, 30, 0.06);
 }
 
-/* Ícone Clínico Vetorial Sóbrio */
+/* Ícone Clínico em Dourado Nobre */
 .treatment-box-icon {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
-  background-color: var(--color-bg-hero);
-  color: var(--color-sage);
+  background-color: var(--color-gold-light);
+  color: var(--color-gold);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
   flex-shrink: 0;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-gold-border);
 }
 
 .treatment-box-icon svg {
@@ -711,14 +721,14 @@ p {
 .treatment-box a {
   font-size: 0.86rem;
   font-weight: 600;
-  color: var(--color-sage);
+  color: var(--color-gold);
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
 .treatment-box a:hover {
-  color: var(--color-sage-hover);
+  color: var(--color-gold-hover);
   transform: translateX(3px);
 }
 
@@ -816,13 +826,13 @@ p {
 }
 
 .schedule-table tr.today-row {
-  background-color: #EBF0EA;
+  background-color: #F2E8DB;
 }
 
 .schedule-table tr.today-row td {
   padding-left: 10px;
   padding-right: 10px;
-  color: var(--color-sage);
+  color: var(--color-gold-hover);
 }
 
 .address-highlight-box {
@@ -894,12 +904,13 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   8. Rodapé Institucional (Carvão Profundo #1C1F24)
+   8. Rodapé Institucional (Café Profundo & Bronze Nobre com Logo Oficial)
    -------------------------------------------------------------------------- */
 .site-footer {
-  background-color: #1C1F24;
-  color: #D5D9E0;
+  background-color: var(--color-dark-surface);
+  color: #E2DBD2;
   padding: 76px 0 34px 0;
+  border-top: 1px solid var(--color-gold-border);
 }
 
 .footer-grid {
@@ -907,6 +918,15 @@ p {
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 44px;
   margin-bottom: 60px;
+}
+
+.footer-brand-logo {
+  height: 48px;
+  width: auto;
+  max-width: 210px;
+  object-fit: contain;
+  margin-bottom: 14px;
+  display: block;
 }
 
 .footer-brand h4 {
@@ -920,7 +940,7 @@ p {
 
 .footer-brand span.cro-sub {
   font-size: 0.75rem;
-  color: var(--color-sand);
+  color: var(--color-gold-light);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -928,7 +948,7 @@ p {
 }
 
 .footer-brand p {
-  color: #9EA3AD;
+  color: #B5ADA3;
   font-size: 0.88rem;
   margin-top: 16px;
   line-height: 1.7;
@@ -954,29 +974,29 @@ p {
 
 .footer-col a, .footer-col li {
   font-size: 0.86rem;
-  color: #9EA3AD;
+  color: #B5ADA3;
   transition: var(--transition);
 }
 
 .footer-col a:hover {
-  color: #FFFFFF;
+  color: var(--color-gold-light);
   padding-left: 2px;
 }
 
 .footer-bottom {
   padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(223, 203, 181, 0.12);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
   font-size: 0.8rem;
-  color: #797E88;
+  color: #9A9084;
 }
 
 /* --------------------------------------------------------------------------
-   9. Botão do WhatsApp Sofisticado (Pill-shaped Verde Sálvia com Opacidade)
+   9. Botão do WhatsApp Sofisticado (Pill-shaped Verde Sálvia Botânico)
    -------------------------------------------------------------------------- */
 .floating-whatsapp-btn {
   position: fixed;
@@ -992,14 +1012,14 @@ p {
   font-size: 0.88rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(82, 107, 87, 0.28);
   z-index: 99;
   transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .floating-whatsapp-btn:hover {
-  opacity: 0.92;
+  opacity: 0.94;
   transform: translateY(-2px);
   background-color: var(--color-sage-hover);
 }
@@ -1017,30 +1037,30 @@ p {
   position: fixed;
   bottom: 26px;
   left: 26px;
-  background-color: var(--color-text-main);
+  background-color: var(--color-dark-surface);
   color: #FFFFFF;
   padding: 13px 22px;
   border-radius: var(--radius-pill);
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 40px rgba(60, 45, 30, 0.12);
   z-index: 98;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--color-gold-border);
   transition: var(--transition);
 }
 
 .concierge-trigger-btn:hover {
-  background-color: #31353C;
+  background-color: var(--color-dark-subtle);
+  border-color: var(--color-gold);
   transform: translateY(-2px);
-  opacity: 0.95;
 }
 
 .concierge-dot-live {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #6A9E72;
+  background-color: var(--color-gold);
   display: inline-block;
 }
 
@@ -1051,9 +1071,9 @@ p {
   width: 380px;
   max-width: calc(100vw - 52px);
   background-color: var(--color-bg-card);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-gold-border);
   border-radius: var(--radius-card);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 50px rgba(60, 45, 30, 0.14);
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -1073,12 +1093,13 @@ p {
 }
 
 .concierge-modal-header {
-  background-color: #1C1F24;
+  background-color: var(--color-dark-surface);
   color: #FFFFFF;
   padding: 16px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid rgba(223, 203, 181, 0.14);
 }
 
 .concierge-header-user {
@@ -1092,7 +1113,7 @@ p {
   height: 40px;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  border: 1.5px solid var(--color-sage);
+  border: 1.5px solid var(--color-gold);
 }
 
 .concierge-avatar-img img {
@@ -1112,7 +1133,7 @@ p {
 
 .concierge-header-text span {
   font-size: 0.72rem;
-  color: var(--color-sand);
+  color: var(--color-gold-light);
 }
 
 .concierge-close-btn {
@@ -1175,7 +1196,7 @@ p {
 
 .chat-direct-wa-btn {
   margin-top: 10px;
-  background-color: var(--color-sage);
+  background-color: var(--color-gold);
   color: #FFFFFF !important;
   display: inline-flex;
   align-items: center;
@@ -1188,7 +1209,8 @@ p {
 }
 
 .chat-direct-wa-btn:hover {
-  opacity: 0.9;
+  opacity: 0.92;
+  background-color: var(--color-gold-hover);
 }
 
 .faq-quick-list {
@@ -1214,9 +1236,9 @@ p {
 }
 
 .faq-quick-btn:hover {
-  border-color: var(--color-sage);
-  color: var(--color-sage);
-  background-color: #EBF0EA;
+  border-color: var(--color-gold);
+  color: var(--color-gold-hover);
+  background-color: var(--color-gold-light);
 }
 
 .concierge-modal-footer {
@@ -1236,7 +1258,7 @@ p {
 }
 
 .chat-input-form-box:focus-within {
-  border-color: var(--color-sage);
+  border-color: var(--color-gold);
 }
 
 .chat-input-element {
@@ -1250,7 +1272,7 @@ p {
 }
 
 .chat-send-submit-btn {
-  background-color: var(--color-sage);
+  background-color: var(--color-gold);
   color: #FFFFFF;
   width: 32px;
   height: 32px;
@@ -1262,7 +1284,7 @@ p {
 }
 
 .chat-send-submit-btn:hover {
-  background-color: var(--color-sage-hover);
+  background-color: var(--color-gold-hover);
 }
 
 /* Typing indicator */
@@ -1343,6 +1365,11 @@ p {
 @media (max-width: 768px) {
   .top-notice {
     display: none;
+  }
+
+  .brand-logo-img {
+    height: 42px;
+    max-width: 190px;
   }
 
   .site-nav {
