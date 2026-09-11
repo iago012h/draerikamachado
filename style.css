@@ -1,49 +1,51 @@
 /* ==========================================================================
    DRA. ERIKA MACHADO — ODONTOLOGIA RESTAURADORA & ESTÉTICA
    CROSP 115717 | SÃO JOSÉ DOS CAMPOS - SP
-   Design: Clínica Boutique Sóbria, Luxo e Assepsia
-   Tipografia: Lora (Títulos) + Inter (Corpo & UI)
-   Paleta: Azul Fechado Nobre (#1E3A5F) + Neutros (#FAFAF9 / #FFFFFF / #E5E7EB)
-   Bordas ultra finas (1px solid #E5E7EB), Zero sombras duras, Botões 8px
+   Direção de Arte de Luxo: Clínica Boutique Premium & Orgânica
+   Tipografia: Cormorant Garamond (-0.02em) + Manrope
+   Paleta: Off-White (#F9F9F7) + Carvão (#2C2C2C) + Verde Sálvia (#5C715E)
+          + Terracota Suave (#B67A62) + Bege Acinzentado (#D4CFC9)
+   Separadores ultra finos (1px solid #EAEAEA), Sombras difusas sutis (0 10px 40px rgba(0,0,0,0.03))
+   Botão do WhatsApp: Formato Pílula em Verde Sálvia com transição suave
    ========================================================================== */
 
 :root {
-  /* Paleta Sóbria: Luxo, Assepsia e Odontologia Restauradora */
-  --color-bg: #FAFAF9;            /* Neutro Off-White / Stone suave */
-  --color-bg-card: #FFFFFF;       /* Branco puro higiênico e luminoso */
-  --color-bg-subtle: #F4F5F7;     /* Fundo secundário calmo */
-  --color-bg-accent: #EDF3F8;     /* Azul glacial muito suave para tags */
+  /* Paleta Nobre & Orgânica de Clínica Boutique */
+  --color-bg: #F9F9F7;            /* Off-White / Branco Gelo */
+  --color-bg-card: #FFFFFF;       /* Superfície branca pura e arejada */
+  --color-bg-subtle: #F4F3F0;     /* Bege neutro muito suave de apoio */
+  --color-bg-sage: #EEF3EE;       /* Sálvia claro para tags e fundos de ícones */
 
-  --color-text-main: #181C20;     /* Carvão profundo elegante (mesma cor para H1 inteiro) */
-  --color-text-muted: #535A64;    /* Ardósia equilibrado para parágrafos */
-  --color-text-light: #7E8794;    /* Detalhes, legendas e dados institucionais */
+  --color-text-main: #2C2C2C;     /* Cinza Carvão Escuro (sem o contraste duro do preto puro) */
+  --color-text-muted: #66635F;    /* Cinza quente equilibrado para parágrafos */
+  --color-text-light: #918D87;    /* Legendas e dados secundários */
 
-  /* Azul Fechado Nobre (Deep Slate Blue) — Máxima confiança médica e sofisticação */
-  --color-primary: #1E3A5F;
-  --color-primary-hover: #142842;
-  --color-primary-light: #2C5282;
+  /* Acentos & Botões de Alta Costura */
+  --color-sage: #5C715E;          /* Verde Sálvia Nobre */
+  --color-sage-hover: #4A5C4C;
+  --color-terracotta: #B67A62;    /* Terracota Suave */
+  --color-terracotta-hover: #A36852;
+  --color-sand: #D4CFC9;          /* Bege Acinzentado */
 
-  /* Neutros Terrosos Sutis / Acentos */
-  --color-taupe: #8A7D70;
-  --color-taupe-light: #F2EFEA;
+  /* Separadores de linha ultra finos */
+  --color-border: #EAEAEA;
+  --color-border-subtle: #F1F1EF;
 
-  /* Separadores ultra finos */
-  --color-border: #E5E7EB;
-  --color-border-subtle: #F0F2F5;
+  /* Tipografia de Alta Costura */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Tipografia: Lora + Inter */
-  --font-serif: 'Lora', Georgia, serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
-  /* Formas Sóbrias (Fim do estilo pílula — 6px a 8px) */
+  /* Formas & Raio */
   --radius-sm: 4px;
-  --radius-btn: 8px;              /* Raio profissional e sóbrio para botões */
-  --radius-card: 8px;
+  --radius-card: 6px;
+  --radius-btn: 6px;              /* Botões sóbrios estruturais */
+  --radius-pill: 9999px;          /* Formato pílula sofisticado para o WhatsApp */
 
-  /* Zero sombras para evitar blocos pré-fabricados */
-  --shadow-none: none;
+  /* Sombra Extremamente Difusa e Sutil (Zero sombras duras) */
+  --shadow-diffuse: 0 10px 40px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 14px 44px rgba(0, 0, 0, 0.05);
 
-  --transition: all 0.25s ease;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Reset Universal */
@@ -90,13 +92,13 @@ button {
   transition: var(--transition);
 }
 
-/* Tipografia de Títulos (Lora) */
+/* Tipografia de Títulos (Cormorant Garamond com Letter-Spacing Negativo Sutil) */
 h1, h2, h3, h4, .font-serif {
   font-family: var(--font-serif);
   color: var(--color-text-main);
-  line-height: 1.22;
+  line-height: 1.18;
   font-weight: 500;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 p {
@@ -116,13 +118,13 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   1. Barra Superior Institucional
+   1. Barra Superior Institucional (Discreta e Elegante)
    -------------------------------------------------------------------------- */
 .top-notice {
-  background-color: #14181D;
-  color: #D5DAE0;
+  background-color: #242220;
+  color: #E2DDD6;
   font-size: 0.8rem;
-  padding: 9px 0;
+  padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -142,14 +144,13 @@ p {
 }
 
 .top-notice-badge .cro-pill {
-  background-color: var(--color-primary);
+  background-color: var(--color-sage);
   color: #FFFFFF;
   padding: 2px 8px;
   border-radius: var(--radius-sm);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .top-notice-links {
@@ -159,10 +160,11 @@ p {
 }
 
 .top-notice-links a {
-  color: #D5DAE0;
+  color: #E2DDD6;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  transition: var(--transition);
 }
 
 .top-notice-links a:hover {
@@ -176,8 +178,8 @@ p {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(250, 250, 249, 0.96);
-  backdrop-filter: blur(10px);
+  background-color: rgba(249, 249, 247, 0.96);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -196,16 +198,16 @@ p {
 
 .brand-title {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 1.68rem;
   font-weight: 600;
   color: var(--color-text-main);
   line-height: 1.1;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .brand-subtitle {
   font-size: 0.72rem;
-  color: var(--color-primary);
+  color: var(--color-sage);
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -222,33 +224,36 @@ p {
   font-size: 0.88rem;
   font-weight: 500;
   color: var(--color-text-main);
+  transition: var(--transition);
 }
 
 .nav-link:hover {
-  color: var(--color-primary);
+  color: var(--color-sage);
 }
 
-/* Botões do Sistema (Fim do estilo pílula -> 8px) */
+/* Botões do Sistema (Verde Sálvia Nobre, Raio 6px) */
 .btn-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: var(--color-primary);
+  background-color: var(--color-sage);
   color: #FFFFFF !important;
   padding: 11px 22px;
   border-radius: var(--radius-btn);
   font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+  border: 1px solid var(--color-sage);
   box-shadow: none;
-  border: 1px solid var(--color-primary);
 }
 
 .btn-cta:hover {
-  background-color: var(--color-primary-hover);
-  border-color: var(--color-primary-hover);
+  background-color: var(--color-sage-hover);
+  border-color: var(--color-sage-hover);
   transform: translateY(-1px);
+  opacity: 0.95;
 }
 
 .btn-outline {
@@ -263,12 +268,13 @@ p {
   border-radius: var(--radius-btn);
   font-size: 0.88rem;
   font-weight: 500;
+  transition: var(--transition);
   box-shadow: none;
 }
 
 .btn-outline:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: var(--color-sage);
+  color: var(--color-sage);
   background-color: var(--color-bg-card);
 }
 
@@ -288,7 +294,7 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   3. Hero Section (Sem Itálico Laranja — Mesma Cor em Todo o H1)
+   3. Hero Section (Estrutura e Posicionamento Preservados)
    -------------------------------------------------------------------------- */
 .hero-section {
   padding: 72px 0 90px 0;
@@ -306,37 +312,36 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--color-bg-accent);
-  color: var(--color-primary);
+  background-color: var(--color-bg-sage);
+  color: var(--color-sage);
   padding: 5px 12px;
   border-radius: var(--radius-sm);
   font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 22px;
-  border: 1px solid rgba(30, 58, 95, 0.12);
+  border: 1px solid rgba(92, 113, 94, 0.15);
 }
 
-/* TÍTULO PRINCIPAL (H1): Mesma cor e fonte em todo o texto, trabalhando apenas o peso */
+/* Título Principal (H1): Mesma cor e fonte em todo o texto, ênfase no peso */
 .hero-headline {
   font-family: var(--font-serif);
-  font-size: clamp(2.3rem, 4vw, 3.6rem);
-  font-weight: 400;
-  line-height: 1.18;
+  font-size: clamp(2.5rem, 4.4vw, 4rem);
+  font-weight: 500;
+  line-height: 1.14;
   color: var(--color-text-main);
   margin-bottom: 22px;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
-/* Ênfase apenas no peso, mantendo exatamente a mesma cor e família tipográfica */
 .hero-headline strong {
   font-weight: 700;
   color: var(--color-text-main);
 }
 
 .hero-lead {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: var(--color-text-muted);
   line-height: 1.8;
   margin-bottom: 34px;
@@ -366,10 +371,11 @@ p {
 }
 
 .hero-badge-item strong {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--color-text-main);
   font-family: var(--font-serif);
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .hero-badge-item span {
@@ -377,7 +383,7 @@ p {
   color: var(--color-text-light);
 }
 
-/* Card Visual da Hero (Zero Sombras, Borda Fina) */
+/* Card Visual da Hero com a Foto Oficial da Doutora (Preservado) */
 .hero-visual {
   position: relative;
   display: flex;
@@ -389,7 +395,7 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   padding: 10px;
-  box-shadow: none;
+  box-shadow: var(--shadow-diffuse);
   max-width: 420px;
   width: 100%;
 }
@@ -415,20 +421,21 @@ p {
 }
 
 .doctor-portrait-caption h3 {
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 600;
   margin-bottom: 2px;
+  letter-spacing: -0.02em;
 }
 
 .doctor-portrait-caption p {
   font-size: 0.82rem;
-  color: var(--color-primary);
+  color: var(--color-sage);
   font-weight: 600;
   letter-spacing: 0.04em;
 }
 
 /* --------------------------------------------------------------------------
-   4. Seção Casos Reais (Zero Sombras, 1px solid #E5E7EB, Fundo Branco)
+   4. Seção Casos Reais (Preservando Proporções e Imagens)
    -------------------------------------------------------------------------- */
 .cases-section {
   padding: 92px 0;
@@ -448,16 +455,16 @@ p {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: var(--color-terracotta);
   display: block;
   margin-bottom: 10px;
 }
 
 .section-title {
-  font-size: clamp(2rem, 3.4vw, 2.9rem);
+  font-size: clamp(2.1rem, 3.5vw, 3rem);
   font-weight: 600;
   margin-bottom: 16px;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .section-desc {
@@ -477,14 +484,15 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   overflow: hidden;
-  box-shadow: none;
+  box-shadow: var(--shadow-diffuse);
   display: flex;
   flex-direction: column;
   transition: var(--transition);
 }
 
 .case-card:hover {
-  border-color: #CBD5E1;
+  box-shadow: var(--shadow-hover);
+  border-color: #DCDCDC;
   transform: translateY(-2px);
 }
 
@@ -504,14 +512,14 @@ p {
 }
 
 .case-card:hover .case-card-img-wrap img {
-  transform: scale(1.015);
+  transform: scale(1.02);
 }
 
 .case-pill-badge {
   position: absolute;
   top: 14px;
   left: 14px;
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 5px 12px;
   border-radius: var(--radius-sm);
   font-size: 0.75rem;
@@ -530,7 +538,7 @@ p {
 }
 
 .case-card-title {
-  font-size: 1.35rem;
+  font-size: 1.48rem;
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--color-text-main);
@@ -548,14 +556,14 @@ p {
 .case-card-action {
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-terracotta);
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
 .case-card-action:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-terracotta-hover);
   transform: translateX(3px);
 }
 
@@ -580,7 +588,7 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   padding: 10px;
-  box-shadow: none;
+  box-shadow: var(--shadow-diffuse);
 }
 
 .about-photo-inner {
@@ -597,14 +605,14 @@ p {
 }
 
 .about-content h2 {
-  font-size: clamp(2.1rem, 3.4vw, 2.8rem);
+  font-size: clamp(2.1rem, 3.5vw, 3rem);
   font-weight: 600;
   margin-bottom: 22px;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .about-lead {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   line-height: 1.8;
   margin-bottom: 20px;
   color: var(--color-text-main);
@@ -622,14 +630,14 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   padding: 20px;
-  box-shadow: none;
+  box-shadow: var(--shadow-diffuse);
 }
 
 .about-feature-box h4 {
   font-size: 0.95rem;
   font-weight: 700;
   font-family: var(--font-sans);
-  color: var(--color-primary);
+  color: var(--color-sage);
   margin-bottom: 6px;
   letter-spacing: -0.01em;
 }
@@ -640,7 +648,7 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   6. Seção de Tratamentos (Cards sem sombra, borda fina 1px solid #E5E7EB)
+   6. Seção de Tratamentos (Cards com borda ultra fina e sombra difusa)
    -------------------------------------------------------------------------- */
 .treatments-section {
   padding: 92px 0;
@@ -662,12 +670,13 @@ p {
   display: flex;
   flex-direction: column;
   transition: var(--transition);
-  box-shadow: none;
+  box-shadow: var(--shadow-diffuse);
 }
 
 .treatment-box:hover {
   transform: translateY(-2px);
-  border-color: var(--color-primary);
+  border-color: var(--color-sage);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Ícone Clínico Vetorial Sóbrio */
@@ -675,14 +684,14 @@ p {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
-  background-color: var(--color-bg-accent);
-  color: var(--color-primary);
+  background-color: var(--color-bg-sage);
+  color: var(--color-sage);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
   flex-shrink: 0;
-  border: 1px solid rgba(30, 58, 95, 0.1);
+  border: 1px solid rgba(92, 113, 94, 0.15);
 }
 
 .treatment-box-icon svg {
@@ -691,7 +700,7 @@ p {
 }
 
 .treatment-box h3 {
-  font-size: 1.38rem;
+  font-size: 1.48rem;
   font-weight: 600;
   margin-bottom: 12px;
   letter-spacing: -0.015em;
@@ -708,14 +717,14 @@ p {
 .treatment-box a {
   font-size: 0.86rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-sage);
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
 .treatment-box a:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-sage-hover);
   transform: translateX(3px);
 }
 
@@ -740,13 +749,13 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   padding: 38px;
-  box-shadow: none;
+  box-shadow: var(--shadow-diffuse);
   display: flex;
   flex-direction: column;
 }
 
 .schedule-card h3 {
-  font-size: 1.8rem;
+  font-size: 1.85rem;
   font-weight: 600;
   margin-bottom: 14px;
 }
@@ -764,15 +773,15 @@ p {
 }
 
 .status-live-badge.open {
-  background-color: #EDF5EE;
-  color: #215428;
-  border: 1px solid #D1E5D4;
+  background-color: var(--color-bg-sage);
+  color: var(--color-sage);
+  border: 1px solid rgba(92, 113, 94, 0.2);
 }
 
 .status-live-badge.closed {
-  background-color: #FDF3F2;
-  color: #943228;
-  border: 1px solid #F3D0CC;
+  background-color: #F8F1EE;
+  color: #B25A4B;
+  border: 1px solid #EED8D2;
 }
 
 .status-live-dot {
@@ -814,13 +823,13 @@ p {
 }
 
 .schedule-table tr.today-row {
-  background-color: var(--color-bg-accent);
+  background-color: var(--color-bg-sage);
 }
 
 .schedule-table tr.today-row td {
   padding-left: 10px;
   padding-right: 10px;
-  color: var(--color-primary);
+  color: var(--color-sage);
 }
 
 .address-highlight-box {
@@ -849,7 +858,7 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   overflow: hidden;
-  box-shadow: none;
+  box-shadow: var(--shadow-diffuse);
   display: flex;
   flex-direction: column;
 }
@@ -895,7 +904,7 @@ p {
    8. Rodapé Institucional
    -------------------------------------------------------------------------- */
 .site-footer {
-  background-color: #14181D;
+  background-color: #242220;
   color: #D5DAE0;
   padding: 76px 0 34px 0;
 }
@@ -909,16 +918,16 @@ p {
 
 .footer-brand h4 {
   font-family: var(--font-serif);
-  font-size: 1.65rem;
+  font-size: 1.7rem;
   font-weight: 600;
   color: #FFFFFF;
   margin-bottom: 4px;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .footer-brand span.cro-sub {
   font-size: 0.75rem;
-  color: var(--color-taupe);
+  color: var(--color-sand);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -926,7 +935,7 @@ p {
 }
 
 .footer-brand p {
-  color: #9EA7B2;
+  color: #A39D94;
   font-size: 0.88rem;
   margin-top: 16px;
   line-height: 1.7;
@@ -952,7 +961,7 @@ p {
 
 .footer-col a, .footer-col li {
   font-size: 0.86rem;
-  color: #9EA7B2;
+  color: #A39D94;
   transition: var(--transition);
 }
 
@@ -970,46 +979,46 @@ p {
   flex-wrap: wrap;
   gap: 16px;
   font-size: 0.8rem;
-  color: #7A8491;
+  color: #7E7870;
 }
 
 /* --------------------------------------------------------------------------
-   9. Botão do WhatsApp Sofisticado (Azul Fechado Nobre, Raio 8px)
+   9. Botão do WhatsApp Sofisticado (Pill-shaped Verde Sálvia com Opacidade no Hover)
    -------------------------------------------------------------------------- */
 .floating-whatsapp-btn {
   position: fixed;
   bottom: 26px;
   right: 26px;
-  background-color: var(--color-primary);
+  background-color: var(--color-sage);
   color: #FFFFFF !important;
-  padding: 12px 20px;
-  border-radius: var(--radius-btn);
+  padding: 13px 22px;
+  border-radius: var(--radius-pill);
   display: inline-flex;
   align-items: center;
   gap: 10px;
   font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
-  box-shadow: 0 4px 18px rgba(30, 58, 95, 0.25);
+  letter-spacing: 0.02em;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   z-index: 99;
-  transition: var(--transition);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .floating-whatsapp-btn:hover {
-  background-color: var(--color-primary-hover);
+  opacity: 0.92;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(30, 58, 95, 0.35);
+  background-color: var(--color-sage-hover);
 }
 
 .floating-whatsapp-btn svg {
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 
 /* --------------------------------------------------------------------------
-   10. Recepção Virtual / FAQ Interativo (Sóbrio, Raio 8px)
+   10. Recepção Virtual / FAQ Interativo
    -------------------------------------------------------------------------- */
 .concierge-trigger-btn {
   position: fixed;
@@ -1017,27 +1026,28 @@ p {
   left: 26px;
   background-color: var(--color-text-main);
   color: #FFFFFF;
-  padding: 12px 20px;
-  border-radius: var(--radius-btn);
+  padding: 13px 22px;
+  border-radius: var(--radius-pill);
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   z-index: 98;
   border: 1px solid rgba(255, 255, 255, 0.12);
   transition: var(--transition);
 }
 
 .concierge-trigger-btn:hover {
-  background-color: #2D343E;
+  background-color: #383532;
   transform: translateY(-2px);
+  opacity: 0.95;
 }
 
 .concierge-dot-live {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #52B788;
+  background-color: #6A9E72;
   display: inline-block;
 }
 
@@ -1050,7 +1060,7 @@ p {
   background-color: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -1070,7 +1080,7 @@ p {
 }
 
 .concierge-modal-header {
-  background-color: #14181D;
+  background-color: #242220;
   color: #FFFFFF;
   padding: 16px 20px;
   display: flex;
@@ -1089,7 +1099,7 @@ p {
   height: 40px;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  border: 1.5px solid var(--color-primary);
+  border: 1.5px solid var(--color-sage);
 }
 
 .concierge-avatar-img img {
@@ -1100,7 +1110,7 @@ p {
 
 .concierge-header-text h4 {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #FFFFFF;
   line-height: 1.1;
@@ -1109,11 +1119,11 @@ p {
 
 .concierge-header-text span {
   font-size: 0.72rem;
-  color: #A3AFBD;
+  color: var(--color-sand);
 }
 
 .concierge-close-btn {
-  color: #A3AFBD;
+  color: #B2ACA3;
   padding: 4px;
 }
 
@@ -1156,11 +1166,11 @@ p {
   background-color: var(--color-bg-card);
   color: var(--color-text-main);
   border: 1px solid var(--color-border);
-  box-shadow: none;
+  box-shadow: var(--shadow-diffuse);
 }
 
 .chat-bubble-item.user .chat-bubble-text {
-  background-color: var(--color-primary);
+  background-color: var(--color-text-main);
   color: #FFFFFF;
 }
 
@@ -1172,20 +1182,20 @@ p {
 
 .chat-direct-wa-btn {
   margin-top: 10px;
-  background-color: var(--color-primary);
+  background-color: var(--color-sage);
   color: #FFFFFF !important;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 9px 16px;
-  border-radius: var(--radius-btn);
+  border-radius: var(--radius-pill);
   font-size: 0.82rem;
   font-weight: 600;
-  transition: var(--transition);
+  transition: opacity 0.3s ease;
 }
 
 .chat-direct-wa-btn:hover {
-  background-color: var(--color-primary-hover);
+  opacity: 0.9;
 }
 
 .faq-quick-list {
@@ -1211,9 +1221,9 @@ p {
 }
 
 .faq-quick-btn:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  background-color: var(--color-bg-accent);
+  border-color: var(--color-sage);
+  color: var(--color-sage);
+  background-color: var(--color-bg-sage);
 }
 
 .concierge-modal-footer {
@@ -1228,12 +1238,12 @@ p {
   gap: 8px;
   background-color: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-btn);
+  border-radius: var(--radius-pill);
   padding: 4px 6px 4px 14px;
 }
 
 .chat-input-form-box:focus-within {
-  border-color: var(--color-primary);
+  border-color: var(--color-sage);
 }
 
 .chat-input-element {
@@ -1247,11 +1257,11 @@ p {
 }
 
 .chat-send-submit-btn {
-  background-color: var(--color-primary);
+  background-color: var(--color-sage);
   color: #FFFFFF;
   width: 32px;
   height: 32px;
-  border-radius: var(--radius-sm);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1259,7 +1269,7 @@ p {
 }
 
 .chat-send-submit-btn:hover {
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-sage-hover);
 }
 
 /* Typing indicator */
@@ -1353,7 +1363,7 @@ p {
     flex-direction: column;
     padding: 24px;
     gap: 18px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   }
 
   .site-nav.is-open {
@@ -1401,7 +1411,7 @@ p {
 
   .concierge-trigger-btn {
     padding: 13px;
-    border-radius: var(--radius-btn);
+    border-radius: var(--radius-pill);
     bottom: 20px;
     left: 20px;
   }
@@ -1414,6 +1424,6 @@ p {
     padding: 13px;
     bottom: 20px;
     right: 20px;
-    border-radius: var(--radius-btn);
+    border-radius: var(--radius-pill);
   }
 }
