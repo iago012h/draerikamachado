@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     appendChatMessage('user', faq.question);
     showTypingIndicator();
 
-    const delay = 400 + Math.random() * 400;
+    const delay = 800 + Math.random() * 700;
     setTimeout(() => {
       removeTypingIndicator();
       appendChatMessage('bot', faq.answer, {
@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       showTypingIndicator();
 
-      const delay = 500 + Math.random() * 500;
+      const delay = 1000 + Math.random() * 1000;
       setTimeout(() => {
         removeTypingIndicator();
 
