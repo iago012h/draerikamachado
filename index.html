@@ -82,6 +82,51 @@
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dra. Erika Machado - Odontologia Restauradora",
+    "image": "dra-erika-machado.png",
+    "@id": "",
+    "url": "",
+    "telephone": "+5512996841633",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Rubião Júnior, 84, Sala 57",
+      "addressLocality": "São José dos Campos",
+      "addressRegion": "SP",
+      "postalCode": "12210-180",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.1896,
+      "longitude": -45.8841
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }],
+    "sameAs": [
+      "https://www.instagram.com/dra.erika.machado/"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -138,7 +183,7 @@
 
         <div class="hero-editorial-layout">
           <!-- Coluna Textual Principal -->
-          <div class="hero-text-col">
+          <div class="hero-text-col reveal">
             <h1 class="hero-editorial-title">
               Seu sorriso merece cuidado de verdade.
             </h1>
@@ -186,7 +231,7 @@
           </div>
 
           <!-- Coluna Visual: Fotografia Real da Dra. Erika com Acabamento Editorial -->
-          <div class="hero-photo-col">
+          <div class="hero-photo-col reveal">
             <figure class="editorial-portrait">
               <div class="portrait-frame">
                 <img 
@@ -208,7 +253,7 @@
     <!-- 2. CASOS CLÍNICOS REAIS (Apresentação Editorial com Escalas Variadas) -->
     <section class="cases-editorial" id="casos" aria-label="Casos Clínicos Reais">
       <div class="container">
-        <header class="editorial-section-header">
+        <header class="editorial-section-header reveal">
           <div class="header-left">
             <span class="section-label">Casos reais</span>
             <h2 class="section-heading">Trabalhos realizados no consultório</h2>
@@ -331,7 +376,7 @@
     <!-- 3. FILOSOFIA CLÍNICA & A PROFISSIONAL (Ensaio Editorial com Alma) -->
     <section class="philosophy-editorial" id="filosofia" aria-label="Sobre a Dra. Erika Machado e Filosofia de Trabalho">
       <div class="container philosophy-grid">
-        <div class="philosophy-sidebar">
+        <div class="philosophy-sidebar reveal">
           <span class="section-label">Sobre a Dra. Erika</span>
           <h2 class="philosophy-sidebar-title">Por que eu escolhi trabalhar assim</h2>
           
@@ -342,7 +387,7 @@
           </div>
         </div>
 
-        <div class="philosophy-main-text">
+        <div class="philosophy-main-text reveal">
           <blockquote class="editorial-pullquote">
             “A odontologia contemporânea não precisa de desgastes agressivos para entregar beleza. O verdadeiro luxo clínico é preservar o que é seu.”
           </blockquote>
@@ -392,7 +437,7 @@
     <!-- 4. DIRETÓRIO DE PROCEDIMENTOS (Sem cards de IA — Lista Editorial Estruturada) -->
     <section class="treatments-directory" id="procedimentos" aria-label="Diretório de Procedimentos Clínicos">
       <div class="container">
-        <header class="editorial-section-header">
+        <header class="editorial-section-header reveal">
           <div class="header-left">
             <span class="section-label">O que eu faço</span>
             <h2 class="section-heading">Procedimentos</h2>
@@ -406,7 +451,7 @@
 
         <div class="directory-list">
           <!-- 01. Diastema -->
-          <div class="directory-row">
+          <div class="directory-row reveal">
             <div class="directory-cell-num">·</div>
             <div class="directory-cell-title">
               <h3>Fechamento de Diastema em Resina Composta</h3>
@@ -422,7 +467,7 @@
           </div>
 
           <!-- 02. Restaurações Estéticas -->
-          <div class="directory-row">
+          <div class="directory-row reveal">
             <div class="directory-cell-num">·</div>
             <div class="directory-cell-title">
               <h3>Restaurações Estéticas & Troca de Resinas</h3>
@@ -438,7 +483,7 @@
           </div>
 
           <!-- 03. Lentes e Facetas -->
-          <div class="directory-row">
+          <div class="directory-row reveal">
             <div class="directory-cell-num">·</div>
             <div class="directory-cell-title">
               <h3>Lentes de Contato & Facetas Cerâmicas</h3>
@@ -454,7 +499,7 @@
           </div>
 
           <!-- 04. Clareamento Dental -->
-          <div class="directory-row">
+          <div class="directory-row reveal">
             <div class="directory-cell-num">·</div>
             <div class="directory-cell-title">
               <h3>Clareamento Dental Supervisionado</h3>
@@ -470,7 +515,7 @@
           </div>
 
           <!-- 05. Próteses Dentárias -->
-          <div class="directory-row">
+          <div class="directory-row reveal">
             <div class="directory-cell-num">·</div>
             <div class="directory-cell-title">
               <h3>Próteses Dentárias & Reabilitação Oral</h3>
@@ -486,7 +531,7 @@
           </div>
 
           <!-- 06. Profilaxia -->
-          <div class="directory-row">
+          <div class="directory-row reveal">
             <div class="directory-cell-num">·</div>
             <div class="directory-cell-title">
               <h3>Profilaxia Clínica & Saúde Periodontal</h3>
@@ -507,7 +552,7 @@
     <!-- 5. CONSULTÓRIO, HORÁRIOS & GUIA PRÁTICO DO PACIENTE -->
     <section class="clinic-guide-section" id="consultorio" aria-label="Informações do Consultório e Localização">
       <div class="container">
-        <header class="editorial-section-header">
+        <header class="editorial-section-header reveal">
           <div class="header-left">
             <span class="section-label">Como chegar</span>
             <h2 class="section-heading">Consultório & horários</h2>
@@ -612,7 +657,7 @@
   <footer class="site-footer-editorial">
     <div class="container footer-grid-editorial">
       <div class="footer-col-identity">
-        <img src="logo-dra-erika-light.png" alt="Dra. Erika Machado - Odontologia Restauradora & Estética" class="footer-brand-logo" width="118" height="62">
+        <img loading="lazy" src="logo-dra-erika-light.png" alt="Dra. Erika Machado - Odontologia Restauradora & Estética" class="footer-brand-logo" width="118" height="62">
         <div class="footer-doc-credentials">
           <strong>Dra. Erika Machado</strong>
           <span>Cirurgiã-Dentista • CROSP 115717</span>
@@ -689,7 +734,7 @@
     <div class="concierge-modal-header">
       <div class="concierge-header-user">
         <div class="concierge-avatar-img">
-          <img src="dra-erika-machado.png" alt="Dra. Erika Machado">
+          <img loading="lazy" src="dra-erika-machado.png" alt="Dra. Erika Machado">
         </div>
         <div class="concierge-header-text">
           <h4>Assistente da Dra. Erika</h4>

@@ -1678,6 +1678,7 @@ strong {
    ========================================================================== */
 .concierge-trigger-editorial {
   position: fixed;
+  animation: float-subtle 4s ease-in-out infinite;
   bottom: 1.75rem;
   left: 1.75rem;
   z-index: 998;
@@ -1698,6 +1699,7 @@ strong {
 
 .concierge-trigger-editorial .dot-indicator {
   width: 8px;
+  animation: pulse-attention 2.5s infinite;
   height: 8px;
   border-radius: 50%;
   background-color: var(--accent-gold);
@@ -1988,4 +1990,38 @@ strong {
     background: rgba(0,0,0,0.05);
     border-radius: 50%;
   }
+}
+
+/* ==========================================================================
+   SCROLL REVEAL & ANIMATIONS
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger directory rows */
+.directory-row:nth-child(1) { transition-delay: 0.1s; }
+.directory-row:nth-child(2) { transition-delay: 0.2s; }
+.directory-row:nth-child(3) { transition-delay: 0.3s; }
+.directory-row:nth-child(4) { transition-delay: 0.4s; }
+.directory-row:nth-child(5) { transition-delay: 0.5s; }
+.directory-row:nth-child(6) { transition-delay: 0.6s; }
+
+@keyframes pulse-attention {
+  0% { box-shadow: 0 0 0 0 rgba(197, 155, 99, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(197, 155, 99, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(197, 155, 99, 0); }
+}
+
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
 }
