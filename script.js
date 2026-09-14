@@ -245,47 +245,87 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mapeamento de palavras-chave para respostas
     const patterns = [
-      { keys: ['diastema', 'espaco', 'separado', 'espaco entre', 'dente separado', 'abertura'], faq: 'diastema' },
-      { keys: ['clareamento', 'clarear', 'branco', 'amarelo', 'branquear', 'dente escuro'], faq: 'clareamento' },
-      { keys: ['protese', 'dentadura', 'ponte', 'coroa', 'perdi dente', 'falta dente'], faq: 'protese' },
-      { keys: ['horario', 'hora', 'funciona', 'aberto', 'sabado', 'domingo', 'semana'], faq: 'horarios' },
-      { keys: ['onde', 'endereco', 'shopping', 'localiza', 'como chego', 'mapa', 'fica'], faq: 'local' },
-      { keys: ['agendar', 'marcar', 'consulta', 'agenda'], faq: 'agendar' },
-      { keys: ['lente', 'faceta', 'porcelana', 'ceramica'], faq: 'lentes' },
-      { keys: ['canal', 'endodont', 'nervo'], faq: 'canal' },
-      { keys: ['implante', 'parafuso', 'pino'], faq: 'implante' },
-      { keys: ['convenio', 'plano', 'aceita', 'pagamento', 'parcela', 'cartao', 'preco', 'valor', 'custa', 'quanto'], faq: 'convenio' },
-      { keys: ['dor', 'doi', 'doendo', 'inchado', 'inflamado', 'urgencia', 'emergencia'], faq: 'dor' },
-      { keys: ['primeira', 'avaliacao', 'como e a consulta', 'primeira vez'], faq: 'primeira' },
-      { keys: ['restaura', 'obtura', 'carie', 'quebrou', 'fratur', 'resina', 'trinca'], faq: 'protese' },
-      { keys: ['gengiva', 'sangra', 'limpeza', 'tartaro', 'profilaxia'], response: {
-        answer: "Sim! A Dra. Erika faz limpeza profissional (profilaxia) e cuida de problemas na gengiva. Se sua gengiva está sangrando ou inchada, é bom agendar uma avaliação.\n\nClica no botão abaixo pra falar com ela!",
-        waMessage: "Oi Dra. Erika! Estou com problema na gengiva e gostaria de uma avaliação."
+      // 1. GREETINGS & SMALL TALK
+      { keys: ['oi', 'ola', 'bom dia', 'boa tarde', 'boa noite', 'tudo bem', 'opa', 'alo', 'ei', 'oii', 'oie'], response: {
+        answer: "Oi! Tudo ótimo por aqui. 😊\n\nComo posso te ajudar hoje? Pode me perguntar sobre horários, tratamentos, valores ou pedir para agendar uma consulta.",
+        waMessage: "Oi! Gostaria de falar com o consultório."
       }},
-      { keys: ['extrac', 'arrancar', 'tirar dente', 'siso'], response: {
-        answer: "Depende do caso! A Dra. Erika avalia se realmente precisa extrair. Para sisos inclusos ou casos cirúrgicos mais complexos, ela pode encaminhar pra um cirurgião parceiro.\n\nManda mensagem pelo WhatsApp e conta o que está acontecendo.",
-        waMessage: "Oi Dra. Erika! Preciso avaliar uma extração."
+      { keys: ['obrigado', 'obrigada', 'valeu', 'agradeco', 'perfeito', 'otimo', 'joia', 'ok', 'entendi', 'show', 'beleza', 'legal'], response: {
+        answer: "Por nada! Se precisar de mais alguma coisa, é só chamar aqui ou no botão do WhatsApp logo abaixo. 🥰",
+        waMessage: "Oi! Gostaria de falar com o consultório."
       }},
-      { keys: ['ortodont', 'aparelho', 'alinhar', 'torto'], response: {
-        answer: "Ortodontia (aparelho) não é a especialidade da Dra. Erika, mas ela pode te avaliar e encaminhar pra um ortodontista de confiança que trabalha em parceria com o consultório.\n\nSe quiser, fala com ela pelo WhatsApp!",
-        waMessage: "Oi Dra. Erika! Gostaria de saber sobre aparelho/ortodontia."
+      { keys: ['tchau', 'adeus', 'ate logo', 'fui', 'ate mais', 'xau'], response: {
+        answer: "Até mais! Um ótimo dia pra você. Quando precisar do consultório, estaremos por aqui. 👋",
+        waMessage: "Oi! Gostaria de falar com o consultório."
       }},
-      { keys: ['bruxismo', 'ranger', 'apertar', 'placa', 'mordida'], response: {
-        answer: "Sim, a Dra. Erika pode te ajudar com isso! Ela avalia o desgaste dos dentes e pode fazer uma placa de bruxismo sob medida pra proteger seus dentes.\n\nÉ um problema mais comum do que parece. Fala com ela pelo WhatsApp!",
-        waMessage: "Oi Dra. Erika! Queria avaliar bruxismo."
+      { keys: ['rs', 'kkk', 'haha', 'legal'], response: {
+        answer: "😄 Pode mandar sua dúvida ou pedir para agendar que eu te ajudo!",
+        waMessage: "Oi! Gostaria de falar com o consultório."
       }},
-      { keys: ['sensibilidade', 'sensivel', 'gelado', 'frio', 'doce'], response: {
-        answer: "Sensibilidade pode ter várias causas — retração da gengiva, cárie, restauração com problema... O ideal é a Dra. Erika avaliar pessoalmente pra identificar o que está acontecendo.\n\nManda mensagem pra ela que vocês combinam!",
-        waMessage: "Oi Dra. Erika! Meus dentes estão muito sensíveis."
+      { keys: ['quem e voce', 'voce e um robo', 'robo', 'ia', 'assistente'], response: {
+        answer: "Eu sou a assistente virtual do consultório! Fui programada pra te dar respostas rápidas sobre a clínica.\n\nMas se você clicar no botão do WhatsApp, vai falar com humanos de verdade lá na recepção! 😉",
+        waMessage: "Oi! Gostaria de tirar algumas dúvidas."
       }},
-      { keys: ['mau halito', 'halitose', 'cheiro', 'bafo'], response: {
-        answer: "Mau hálito pode ter várias origens — desde problemas na gengiva até restaurações antigas. A Dra. Erika pode avaliar sua saúde bucal completa e identificar a causa.\n\nFala com ela pelo WhatsApp sem constrangimento, é mais comum do que você imagina!",
-        waMessage: "Oi Dra. Erika! Gostaria de uma avaliação sobre halitose."
-      }}
+      { keys: ['nome dela', 'quem e a doutora', 'quem e erika'], response: {
+        answer: "A Dra. Erika Machado é cirurgiã-dentista (CROSP 115717) e Mestra em Odontologia Restauradora. Ela foca muito em salvar o máximo da estrutura do seu dente e em estética com resinas e cerâmicas.",
+        waMessage: "Oi! Gostaria de saber mais sobre a Dra. Erika."
+      }},
+
+      // 2. SCHEDULING / AGENDAMENTO AMPLIADO
+      { keys: ['agendar', 'marcar', 'consulta', 'agenda', 'horario', 'vaga', 'queria ir', 'marcar um dia', 'ver um dia', 'reservar', 'agendamento', 'agende', 'ir ai', 'passar com ela', 'ver a dra'], faq: 'agendar' },
+
+      // 3. COSTS / FINANCEIRO AMPLIADO
+      { keys: ['convenio', 'plano', 'aceita', 'pagamento', 'parcela', 'cartao', 'preco', 'valor', 'custa', 'quanto', 'orcamento', 'caro', 'barato', 'divide', 'pix', 'dinheiro', 'boleto', 'amil', 'bradesco', 'sulamerica', 'odontoprev', 'unimed'], faq: 'convenio' },
+
+      // 4. LOCATIONS / LOCALIZAÇÃO AMPLIADO
+      { keys: ['onde', 'endereco', 'shopping', 'localiza', 'como chego', 'mapa', 'fica', 'rua', 'bairro', 'cidade', 'gps', 'waze', 'maps'], faq: 'local' },
+
+      // 5. EMERGENCIES / URGÊNCIA AMPLIADO
+      { keys: ['dor', 'doi', 'doendo', 'inchado', 'inflamado', 'urgencia', 'emergencia', 'sangue', 'sangrando', 'pus', 'socorro', 'muita dor', 'caiu', 'soltou', 'provisorio', 'urgente'], faq: 'dor' },
+
+      // 6. CLINICAL PROCEDURES - MASSIVE LIBRARY
+      // Profilaxia / Gengiva
+      { keys: ['gengiva', 'sangra', 'limpeza', 'tartaro', 'profilaxia', 'halito', 'fedor', 'cheiro', 'fluor', 'boca amarga', 'boca seca'], response: {
+        answer: "A Dra. Erika faz a profilaxia clínica (limpeza completa) detalhada, ideal pra tirar o tártaro e evitar doenças na gengiva, mau hálito e cáries.\n\nO ideal é fazer de 6 em 6 meses! Quer agendar a sua?",
+        waMessage: "Oi Dra. Erika! Quero agendar uma limpeza/avaliação."
+      }},
+      // Diastema / Resina / Estética Direta
+      { keys: ['diastema', 'espaco', 'separado', 'espaco entre', 'dente separado', 'abertura', 'vazado', 'fresta'], faq: 'diastema' },
+      // Clareamento
+      { keys: ['clareamento', 'clarear', 'branco', 'amarelo', 'branquear', 'dente escuro', 'mancha', 'cafe', 'cigarro'], faq: 'clareamento' },
+      // Restauração / Cárie
+      { keys: ['restaura', 'obtura', 'carie', 'quebrou', 'fratur', 'resina', 'trinca', 'furado', 'buraco', 'pedaco'], response: {
+        answer: "Cáries, dentes trincados ou fraturados são resolvidos com restaurações estéticas! A Dra. Erika é Mestra nisso — ela usa resinas de altíssima qualidade pra deixar o dente igualzinho ao natural, tanto na cor quanto no formato.\n\nManda uma mensagem no Whats pra agendar uma avaliação!",
+        waMessage: "Oi Dra. Erika! Preciso avaliar uma restauração."
+      }},
+      // Lentes / Facetas
+      { keys: ['lente', 'faceta', 'porcelana', 'ceramica', 'transformar o sorriso', 'sorriso novo'], faq: 'lentes' },
+      // Prótese (Fixa, Coroa) / Implante
+      { keys: ['protese', 'dentadura', 'ponte', 'coroa', 'perdi dente', 'falta dente', 'chumbo', 'cinza', 'preta'], faq: 'protese' },
+      { keys: ['implante', 'parafuso', 'pino', 'raiz artificial'], faq: 'implante' },
+      // Canal
+      { keys: ['canal', 'endodont', 'nervo', 'polpa', 'matar o nervo', 'tratamento de canal'], faq: 'canal' },
+      // Cirurgia / Extração
+      { keys: ['extrac', 'arrancar', 'tirar dente', 'siso', 'ciso', 'juizo', 'dente do siso', 'cirurgia'], response: {
+        answer: "Para extrações simples, a Dra. Erika faz no consultório. Para dentes do siso inclusos ou cirurgias complexas, ela tem um cirurgião parceiro de altíssima confiança pra realizar o procedimento.\n\nManda uma foto no Whats pra ela dar uma olhada e te orientar!",
+        waMessage: "Oi Dra. Erika! Preciso tirar uma dúvida sobre extração/siso."
+      }},
+      // Ortodontia / Aparelho
+      { keys: ['ortodont', 'aparelho', 'alinhar', 'torto', 'invisalign', 'alinhador', 'transparente', 'ferro', 'borrachinha'], response: {
+        answer: "Seus dentes estão tortos ou desalinhados? A Dra. Erika não coloca aparelho (ortodontia não é o foco dela), mas ela pode te examinar e encaminhar pros melhores especialistas parceiros dela.\n\nClica abaixo e manda uma mensagem pra gente!",
+        waMessage: "Oi Dra. Erika! Gostaria de indicações ou saber sobre aparelho."
+      }},
+      // Bruxismo
+      { keys: ['bruxismo', 'ranger', 'apertar', 'placa', 'mordida', 'atm', 'estalo', 'dor de cabeca', 'maxilar', 'acordo com dor'], response: {
+        answer: "Acorda com dor ou com os dentes cansados? Pode ser bruxismo! A Dra. Erika faz uma avaliação da sua mordida e pode confeccionar uma placa de acrílico sob medida para proteger seus dentes durante o sono.\n\nÉ super importante tratar isso pra não desgastar os dentes. Vamos agendar?",
+        waMessage: "Oi Dra. Erika! Acho que tenho bruxismo e preciso avaliar uma placa."
+      }},
+      { keys: ['primeira', 'avaliacao', 'como e a consulta', 'primeira vez', 'conhecer'], faq: 'primeira' }
     ];
 
     for (const pattern of patterns) {
       for (const key of pattern.keys) {
+        // Usa regex pra checar se a palavra inteira ou substring existe, mas lidando com espaços
         if (lower.includes(key)) {
           if (pattern.faq) {
             return { type: 'faq', key: pattern.faq };
